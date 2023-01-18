@@ -13,6 +13,6 @@ s = ''
 if a==b or (a==b-1):
     print('Между А и В нет других целых чисел(')
 else:
-    for i in range(a+1,b-1):
+    for i in range(a+1,b):
         s = s + str(i)+' '
     print('Числа между А и В:', s)
