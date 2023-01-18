@@ -1,4 +1,5 @@
 import math
+#Вариант 1 в задании
 
 def ploshad_kv(x):
     return x**2
