@@ -12,23 +12,21 @@ for i in range(5):
     print()
 for i in range(5):
     max_num = a[i][0]
-    min_num = a[i][0]
-    count_i_max = i
-    count_j_max = 0
-    count_i_min = i
-    count_j_min = 5
+    min_num = a[i][5]
+    first_num = a[i][0]
+    last_num = a[i][5]
+    index_j_max = 0
+    index_j_min = 5
     for j in range(6):
         if a[i][j]>max_num:
             max_num=a[i][j]
-            count_i_max = i
-            count_j_max = j
+            index_j_max = j
         if a[i][j]<min_num:
             min_num=a[i][j]
-            count_j_min = j
-            count_j_max = i
-    a[count_i_max][count_j_max]=a[i][0]
+            index_j_min = j
+    a[i][index_j_max]=first_num
+    a[i][index_j_min]=last_num
     a[i][0]=max_num
-    a[count_i_min][count_j_min]=a[i][5]
     a[i][5]=min_num        
 print('В результате получается такая матрица:\n')
 for i in range(5):
